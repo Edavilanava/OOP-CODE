@@ -68,3 +68,61 @@ square.draw();
 
 //The Circle and Square classes demonstrate inheritance by extending the Shape class. 
 //They also demonstrate polymorphism by overriding the move and draw methods inherited
+
+
+
+//In TypeScript, a static member is defined by using the "static" keyword before the property or method, like this:
+class MyClass {
+    static myStaticProperty = "some value";
+    static myStaticMethod() {
+        console.log("This is a static method");
+    }
+}
+
+
+
+//In the example above, The properties and methods with the protected access modifier can only be accessed from the Shape class and any class that extends it, in this case the Circle class, which can access name and getName() by using the this keyword.
+// class Form {
+//     protected name: string;
+
+//     protected constructor(name: string) {
+//         this.name = name;
+//     }
+
+//     protected getName(): string {
+//         return this.name;
+//     }
+// }
+
+// class Round extends Shape {
+//     constructor(name: string) {
+//         super(name);
+//     }
+
+//     describe(): void {
+//         console.log(`I am a ${this.getName()}.`);
+//     }
+// }
+
+
+
+//In the example above, the count variable and the increment function are both defined with private access modifier, which means that it can only be accessed within the Counter class, not outside it.
+
+//This approach allows you to create a clear and well-defined interface for interacting with the object, without revealing its internal implementation details, making it more robust and maintainable.
+// class Counter {
+//     private count = 0;
+
+//     increment(): void {
+//         this.count++;
+//     }
+
+//     getCount(): number {
+//         return this.count;
+//     }
+// }
+
+// const myCounter = new Counter();
+// console.log(myCounter.count); //Error: Property 'count' is private and only accessible within class 'Counter'.
+// console.log(myCounter.getCount()); // 0
+// myCounter.increment();
+// console.log(myCounter.getCount()); // 1
